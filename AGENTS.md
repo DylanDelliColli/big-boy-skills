@@ -19,8 +19,18 @@ Rules for any agent session working here:
   that run is simultaneously the skill's establish-mode acceptance
   test and this repo's founding thesis. Do not write it by hand.
 - Documentation is governed by `docs-corpus.json` and checked with
-  ABACUS's docs-doctor until the tool itself is extracted:
-  `python3 ~/dev-environment/abacus/tools/docs_doctor.py --repo .`
+  docs-doctor: `python3 ~/dev-environment/abacus/tools/docs_doctor.py
+  --repo .` — **this path is temporary.** The tool is migrating to
+  `~/dev-environment/jot` (bead `jot-met.3`), which deletes the abacus
+  copy in the same landing. If that path is missing, the migration has
+  happened: use the jot checkout, and fix this line.
+- Cross-lineage adversarial review is what produced the quality of
+  everything this repo inherited — the two skills were aligned over
+  four and five review rounds, and docs-doctor over ten, catching
+  roughly thirty real defects. This repo has **no review lane
+  established yet**. Before landing a skill change, pair with a
+  reviewer of the other lineage (a Codex pane for a Claude session, or
+  the reverse) and record the arrangement here, as the jot repo does.
 - `skills/*/SKILL.md` files are deliberately outside the managed
   corpus for now: doc-meta blocks would break the skill loader's
   frontmatter. Their governance class is an open decision on the
@@ -35,3 +45,32 @@ Rules for any agent session working here:
 - Tree-residency applies here as in abacus: the tree holds current
   state, git history is the archive, `docs/history/README.md` is the
   pointer index, one review file per cycle, one shift report per lane.
+
+## MVP first, fix as we use
+
+**Operator ruling, 2026-08-12, binding on every build in this repo.**
+Ship the braindead-simple version, dogfood it, and handle real failures
+when observed evidence exists. Do not pre-build contingencies for
+failure modes that have not happened.
+
+Why it exists: a sibling spec reached v20 across ~18 adversarial review
+rounds — ULID event ids, canonical digests, an fsync/`link(2)` publish
+protocol, a two-observation gate, an attempt state machine — to replace
+a **123-line bash script** that nobody opened across twenty spec
+versions. Two mechanisms let that happen, and both are live here:
+
+1. A ceremony rule that judges a review round by *what it caught* tests
+   productivity **within a chosen scope** and is structurally blind to
+   whether the artifact should have been that large. A big artifact
+   always yields defects under review, so the rule never fires.
+2. "Verify the seam before you draft" must be applied to the **product
+   being replaced**, not only to code seams. Read what exists and name
+   what is inadequate about it before designing a replacement.
+
+Concretely for the work in flight: `skills-h1u` says to reuse the
+docs-doctor fixture patterns. Reuse the *shape* — temp repos, a clean
+baseline, result-bound assertions — **not the scale.** That suite is
+176 cases for a 1,400-line linter that gates every documentation
+change. A skill's check mode needs enough cases to make its verdict
+fold trustworthy and no more. An approved design document is never a
+build order.

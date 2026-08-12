@@ -28,8 +28,10 @@ Rules for any agent session working here:
 - Never edit `~/.claude` or other machine-global configuration from
   this repo; the user-global install (symlinks into `~/.claude/skills/`)
   is the operator's act, documented in README.md.
-- No remote is configured yet; the operator sets it. Until then,
-  commit locally and say so in handoffs — do not invent a remote.
+- The only remote is `git@github-personal:DylanDelliColli/big-boy-skills.git`
+  (the `github-personal` SSH alias authenticates as DylanDelliColli;
+  the machine's default key has no write access). Never add other
+  remotes. Commit when a coherent unit lands; push after committing.
 - Tree-residency applies here as in abacus: the tree holds current
   state, git history is the archive, `docs/history/README.md` is the
   pointer index, one review file per cycle, one shift report per lane.

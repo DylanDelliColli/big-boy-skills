@@ -19,7 +19,7 @@ Rules for any agent session working here:
   that run is simultaneously the skill's establish-mode acceptance
   test and this repo's founding thesis. Do not write it by hand.
 - Documentation is governed by `docs-corpus.json` and checked with
-  docs-doctor: `python3 ~/dev-environment/abacus/tools/docs_doctor.py
+  docs-doctor: `python3 ~/dev-environment/abacus-v1/tools/docs_doctor.py
   --repo .` — **this path is temporary.** The tool is migrating to
   `~/dev-environment/jot` (bead `jot-met.3`), which deletes the abacus
   copy in the same landing. If that path is missing, the migration has
@@ -27,10 +27,17 @@ Rules for any agent session working here:
 - Cross-lineage adversarial review is what produced the quality of
   everything this repo inherited — the two skills were aligned over
   four and five review rounds, and docs-doctor over ten, catching
-  roughly thirty real defects. This repo has **no review lane
-  established yet**. Before landing a skill change, pair with a
-  reviewer of the other lineage (a Codex pane for a Claude session, or
-  the reverse) and record the arrangement here, as the jot repo does.
+  roughly thirty real defects. Before landing a skill change, pair
+  with a reviewer of the other lineage (a Codex pane for a Claude
+  session, or the reverse). **The established lane is the Codex pane
+  in this repo's own herdr workspace** — `w1J:p2` as of 2026-08-12,
+  which replaced `w1:p7` when the operator retired that pane. A
+  replacement pane inherits none of the doctrine the long-running
+  review panes held, and a fresh reviewer will wave through a bloated
+  artifact that an experienced one would refuse: prime it on first
+  dispatch with the MVP-first ruling below, the scale-not-shape scope
+  guard, and the archived review round for the skill under review.
+  Recovery pointers for those rounds are recorded on `skills-xg9`.
 - `skills/*/SKILL.md` files are deliberately outside the managed
   corpus for now: doc-meta blocks would break the skill loader's
   frontmatter. Their governance class is an open decision on the

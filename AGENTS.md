@@ -20,15 +20,7 @@ Rules for any agent session working here:
   test and this repo's founding thesis. Do not write it by hand.
 - Documentation is governed by `docs-corpus.json` and checked with
   docs-doctor: `python3 ~/dev-environment/abacus-v1/tools/docs_doctor.py
-  --repo .` — this is the **eleven-check archive copy**, and it is stable:
-  `abacus-v1` is a frozen parts bin and `jot-met.3` no longer deletes it.
-  jot is receiving only the four structural checks (metadata, corpus
-  index, index agreement, classification and confinement); the other
-  seven — including `reverse-citations`, which produces this repo's only
-  live findings — are deferred there, not rejected. So when jot's copy
-  lands, **this repo must choose**: keep invoking the archive and keep
-  that signal, or move to jot's copy and accept losing it. Record the
-  choice here rather than discovering it. Tracked on `jot-met.3`.
+  --repo .`
 - Cross-lineage adversarial review is what produced the quality of
   everything this repo inherited — the two skills were aligned over
   four and five review rounds, and docs-doctor over ten, catching

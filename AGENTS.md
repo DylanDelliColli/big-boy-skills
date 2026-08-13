@@ -20,7 +20,10 @@ Rules for any agent session working here:
   test and this repo's founding thesis. Do not write it by hand.
 - Documentation is governed by `docs-corpus.json` and checked with
   docs-doctor: `python3 ~/dev-environment/abacus-v1/tools/docs_doctor.py
-  --repo .`
+  --repo .` — the eleven-check copy. jot's copy has landed and carries
+  four checks; `reverse-citations`, which produces every finding this
+  repo currently gets, is not among them. Whether to move is open on
+  `skills-r44`.
 - Cross-lineage adversarial review is what produced the quality of
   everything this repo inherited — the two skills were aligned over
   four and five review rounds, and docs-doctor over ten, catching

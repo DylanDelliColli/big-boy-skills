@@ -19,11 +19,19 @@ Rules for any agent session working here:
   that run is simultaneously the skill's establish-mode acceptance
   test and this repo's founding thesis. Do not write it by hand.
 - Documentation is governed by `docs-corpus.json` and checked with
-  docs-doctor: `python3 ~/dev-environment/abacus-v1/tools/docs_doctor.py
-  --repo .` — the eleven-check copy. jot's copy has landed and carries
-  four checks; `reverse-citations`, which produces every finding this
-  repo currently gets, is not among them. Whether to move is open on
-  `skills-r44`.
+  docs-doctor from jot: `python3 ~/dev-environment/jot/tools/docs_doctor.py
+  --repo .`. `docs-corpus.json` declares membership only — which document
+  locations this repo admits, plus `conforms_to` naming the class-library
+  version; the classes ship inside the tool, and
+  `docs_doctor.py --classes` lists them. Run `--init` to regenerate the
+  file rather than hand-authoring it.
+- **Known gap from that move (operator decision, 2026-08-13):** jot's copy
+  carries four structural checks. `reverse-citations` is not among them,
+  and it produced every finding this repo used to get — eight as of the
+  move, all against `skills-xg9`. This repo now reports clean because the
+  check that found things no longer runs, not because the citations were
+  fixed. They are still there. The eleven-check copy survives in the
+  frozen `abacus-v1` tree if that signal is ever wanted back.
 - Cross-lineage adversarial review is what produced the quality of
   everything this repo inherited — the two skills were aligned over
   four and five review rounds, and docs-doctor over ten, catching

@@ -29,7 +29,7 @@ stable — that is an indexing courtesy, not a decomposition plan.
 ## Establish mode
 
 A short interview — one question at a time, wait for each answer. Bounds are
-defaults, not laws: about seven questions, stopping when the five fields are
+defaults, not laws: about nine questions, stopping when the six fields are
 complete rather than when a count is hit. You are extracting a thesis the
 operator already holds, not inventing one:
 
@@ -43,6 +43,16 @@ operator already holds, not inventing one:
    usually suffices, not a target).
 5. **Kill criteria** — what evidence would mean the thesis is wrong and the
    work should stop or pivot.
+6. **Test values** — the classes of test this repository actually uses,
+   ranked. Ask the operator to name the classes (whatever taxonomy the
+   repository really runs — unit, integration, end-to-end, property,
+   real-process), then rank them by value. The thesis document records the
+   answer as a required "Test values" section: a short ranked table with,
+   per class, its value rank, why it earns that rank in this repository,
+   and its cost class — effectively-free or expensive to run. Values and
+   ranks only — binding numeric caps never live in the north star.
+   Planning documents in consuming repositories carry any caps and cite
+   this ranking.
 
 Where the repository has normative documents (in ABACUS: `CONTEXT.md`, the
 ADRs), **cite them, never duplicate them** — a duplicated invariant drifts

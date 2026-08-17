@@ -37,19 +37,22 @@ Rules for any agent session working here:
   four and five review rounds, and docs-doctor over ten, catching
   roughly thirty real defects. Before landing a skill change, pair
   with a reviewer of the other lineage (a Codex pane for a Claude
-  session, or the reverse). **The established lane is the Codex pane
-  in this repo's own herdr workspace** — `w1J:p2` as of 2026-08-12,
-  which replaced `w1:p7` when the operator retired that pane. A
-  replacement pane inherits none of the doctrine the long-running
-  review panes held, and a fresh reviewer will wave through a bloated
-  artifact that an experienced one would refuse: prime it on first
-  dispatch with the MVP-first ruling below, the scale-not-shape scope
-  guard, and the archived review round for the skill under review.
-  Recovery pointers for those rounds are recorded on `skills-xg9`.
+  session, or the reverse). **The established lane is a Codex pane
+  in this repo's own herdr workspace** — recompute the live seat
+  before every dispatch (`herdr agent list`): pane IDs do not survive
+  repo renames or herdr restarts, so this contract names none. A
+  fresh seat inherits no doctrine, and an unprimed reviewer will wave
+  through a bloated artifact an experienced one would refuse: prime
+  it on first dispatch with the MVP-first ruling below, the
+  scale-not-shape scope guard, and the archived rounds for the skill
+  under review — the root SKILL-REVIEW-* files first, whose
+  verification style (hash the blobs yourself, verify claims against
+  the filesystem) a new seat should match. Recovery pointers for the
+  abacus-era rounds are recorded on `skills-xg9`.
 - `skills/*/SKILL.md` files are deliberately outside the managed
   corpus for now: doc-meta blocks would break the skill loader's
-  frontmatter. Their governance class is an open decision on the
-  extraction bead.
+  frontmatter. Their governance class is routed to `skills-bny` (the
+  council acceptance-run subject), not decided on the extraction bead.
 - Never edit `~/.claude` or other machine-global configuration from
   this repo; the user-global install (symlinks into `~/.claude/skills/`)
   is the operator's act, documented in README.md.

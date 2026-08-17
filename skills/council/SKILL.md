@@ -196,12 +196,14 @@ Herdr/Claude/Codex versions, exact model args, all ledger ids, start/end
 times and terminal states, experiment commands and raw-output hashes,
 findings-file hashes, and teardown outcomes.
 
-**Tracker discipline (hard rule).** No note beads, no communication beads,
-no "council says" beads. A defect mints a bead only with the full bar —
-fingerprint, dependencies, acceptance — in the *initial* description (stock
-`br create` cannot set acceptance atomically), preserving the returned
-lowercase `abacus-*` id. On the first live run, record bead-worthy defects
-in `record.md` and let the operator mint them afterward.
+**Tracker discipline (hard rule).** No note work items, no communication
+work items, no "council says" work items. A defect mints a work item only
+with the full bar — fingerprint, dependencies, acceptance — in the
+*initial* description (some trackers cannot set acceptance atomically at
+create time — confirm through the repository's workflow contract rather
+than assume), preserving whatever id the tracker returns, verbatim. On the
+first live run, record work-item-worthy defects in `record.md` and let the
+operator mint them afterward.
 
 **The commit is the last act, not part of synthesis.** Order: import and
 hash findings → synthesize → finally-style teardown (below) → append every

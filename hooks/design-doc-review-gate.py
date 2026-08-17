@@ -41,9 +41,9 @@ the reviewer must be a FRESH context of a different lineage (a Codex herdr \
 pane for a Claude session, or the reverse), never this session, which holds \
 the sunk cost.
 
-1. ~/dev-environment/skills/agents/bloat-reviewer.md — runs FIRST and may only \
+1. ~/dev-environment/bb-skills/agents/bloat-reviewer.md — runs FIRST and may only \
 propose cuts. It reads this document plus the repository's NORTH-STAR.md.
-2. ~/dev-environment/skills/agents/spec-validator.md — runs after, on whatever \
+2. ~/dev-environment/bb-skills/agents/spec-validator.md — runs after, on whatever \
 survives, and may not add requirements.
 
 If this repository has no NORTH-STAR.md, say so plainly: without one the bloat \

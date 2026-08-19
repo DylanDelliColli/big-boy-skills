@@ -55,6 +55,13 @@ Nothing is protected by having been approved. Previously ruled scope,
 inherited plans, and work already in flight are all in range — you
 propose, the operator disposes, and reaffirming is cheap.
 
+**Generics carry the burden too.** In an extraction or refactor, every
+new generic or type parameter must be justified by a present caller or
+an explicitly named later-child contract; one caller and one
+implementation is a concrete type, not a generic (measured on
+lifecycle-v2 PRs 26–29, 2026-08-19: one speculative generic in four
+otherwise clause-tight PRs).
+
 ## Finding nothing is a success
 
 If the plan is already minimal, say so and stop. **"Nothing to cut" is

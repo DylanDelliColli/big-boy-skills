@@ -19,6 +19,12 @@ herdr agent start <review-name> --kind codex --pane <pane_id>
 # 3. Hand it the role card by file, not inline (shell-quoting-safe, guard-safe)
 #    Write role card + assignment to an IGNORED path (e.g. repo tmp/), then:
 herdr agent prompt <review-name> "Read tmp/<assignment>.md in this repository and execute the review it specifies, exactly as written. Make no edits to any file. Print the review and stop." --wait
+#    If the brief mandates posting a verdict (gh pr comment), authorize that
+#    single write explicitly or codex's authorization layer refuses it
+#    (observed PR 35): "... execute the review it specifies, exactly as
+#    written, including posting the verdict comment it mandates — that
+#    single write is authorized. Make no other change of any kind. Then
+#    stop."
 
 # 4. Read (if you did not use --wait above: herdr agent wait <review-name> --until done)
 herdr pane read <pane_id> --source recent-unwrapped --lines 400
